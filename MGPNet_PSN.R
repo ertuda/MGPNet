@@ -641,7 +641,7 @@ legend(x = -1,y = 2.5,bty = 'n',lwd = 1.5,text.font=2,cex=1.2,
        legend=c('PO_PN','PP'),col = c('gray2','purple'))
 axis(side=2,font=2,cex.axis=1.2)
 axis(side=1,font=2,cex.axis=1.2)
-title(main ='PSN Pos Cancer Protein Cor',ylab ="Frequency Density",
+title(main ='PSN PP Cancer Protein Cor',ylab ="Frequency Density",
       xlab="Protein Correlation",font.lab=2,cex.lab=1.2,cex.main=1.3)
 dev.off()
 
@@ -750,7 +750,7 @@ rno = 1000
 # PP
 ####
 # for sets of positive pairs with similar size to PP 
-pospps = ps[ps$mor==1,c(1,2)]
+pospps = ps[ps$V5=='Pos',c(1,2)]
 
 # normal RNA expression
 rcoppvrna = c()
@@ -900,7 +900,7 @@ dev.off()
 # NN
 ###
 # for sets of negative pairs with similar size to NN
-negpps = ps[ps$mor==-1,c(1,2)]
+negpps = ps[ps$V5=='Neg',c(1,2)]
 
 # normal RNA expression
 rconnvrna = c()
